@@ -2,13 +2,13 @@
 
 # Go channels at horizontal scale [![Build Status](https://travis-ci.org/matryer/vice.svg?branch=master)](https://travis-ci.org/matryer/vice)
 
-* Use Go channels transparently over a [messaging queue technology of your choice](https://github.com/matryer/vice/tree/master/queues) (Currently [NATS](http://nats.io), [Redis](http://redis.io) or [NSQ](http://nsq.io), [Amazon SQS](https://aws.amazon.com/sqs/))
+* Use Go channels transparently over a [messaging queue technology of your choice](https://github.com/nxsre/vice/tree/master/queues) (Currently [NATS](http://nats.io), [Redis](http://redis.io) or [NSQ](http://nsq.io), [Amazon SQS](https://aws.amazon.com/sqs/))
 * Swap `vice.Transport` to change underlying queueing technologies transparently
 * Write idiomatic Go code instead of learning queue specific APIs
 * Develop against in-memory implementation before putting it into the wild
 * Independent unit tests (no need for running queue technology)
 
-PROJECT STATUS: [v1 released](https://github.com/matryer/vice/releases/tag/v1.0.0)
+PROJECT STATUS: [v1 released](https://github.com/nxsre/vice/releases/tag/v1.0.0)
 
 ## Usage
 
@@ -30,16 +30,16 @@ for name := range names {
 }
 ```
 
-* The code above is illustrative, be sure to read the [design patterns](https://github.com/matryer/vice/blob/master/docs/design-patterns.md)
+* The code above is illustrative, be sure to read the [design patterns](https://github.com/nxsre/vice/blob/master/docs/design-patterns.md)
 * Always stop the Transport, some technologies register and deregister their interest in the queues (this means trapping signals and gracefully shutting down services before exiting)
 * Use `Send` and `Receive` methods to get channels, which you can then use as normal
 * Be sure to always handle the `ErrChan()` error channel to make sure the underlying queue technology is healthy
 
 ## Quick start guide
 
-* Write your services with unit tests using normal Go channels (see our [design patterns](https://github.com/matryer/vice/blob/master/docs/design-patterns.md))
-* Install Vice with `go get github.com/matryer/vice/...`
-* Select a [messaging queue technology](https://github.com/matryer/vice/tree/master/queues)
+* Write your services with unit tests using normal Go channels (see our [design patterns](https://github.com/nxsre/vice/blob/master/docs/design-patterns.md))
+* Install Vice with `go get github.com/nxsre/vice/...`
+* Select a [messaging queue technology](https://github.com/nxsre/vice/tree/master/queues)
 * Build a command to run your service
 
 Read the blog post: [Introducing vice: Go channels across many machines](https://medium.com/@matryer/introducing-vice-go-channels-across-many-machines-bcac1147d7e2)

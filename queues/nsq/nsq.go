@@ -5,8 +5,8 @@ import (
 	"sync"
 	"time"
 
-	"github.com/matryer/vice"
-	"github.com/matryer/vice/backoff"
+	"github.com/nxsre/vice"
+	"github.com/nxsre/vice/backoff"
 	"github.com/nsqio/go-nsq"
 )
 

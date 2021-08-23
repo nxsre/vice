@@ -6,8 +6,8 @@ import (
 	"time"
 
 	"github.com/matryer/is"
-	"github.com/matryer/vice"
-	"github.com/matryer/vice/vicetest"
+	"github.com/nxsre/vice"
+	"github.com/nxsre/vice/vicetest"
 	"github.com/nats-io/nats.go"
 	"github.com/nats-io/stan.go"
 	uuid "github.com/satori/go.uuid"

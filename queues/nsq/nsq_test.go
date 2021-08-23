@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/matryer/is"
-	"github.com/matryer/vice"
-	"github.com/matryer/vice/vicetest"
+	"github.com/nxsre/vice"
+	"github.com/nxsre/vice/vicetest"
 	"github.com/nsqio/go-nsq"
 )
 

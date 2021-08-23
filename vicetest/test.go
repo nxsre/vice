@@ -7,13 +7,13 @@ import (
 	"time"
 
 	"github.com/matryer/is"
-	"github.com/matryer/vice"
+	"github.com/nxsre/vice"
 )
 
 // Transport runs standard transport tests. All Transport types pass
 // this test.
 //
-// For more information see https://github.com/matryer/vice/blob/master/docs/writing-transports.md
+// For more information see https://github.com/nxsre/vice/blob/master/docs/writing-transports.md
 //
 // Transports should be initialised with a clean state. Old persisted messages
 // can interfere with the test.
